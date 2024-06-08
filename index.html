@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game">
+        <h1>Tic-Tac-Toe</h1>
+        <div id="rules">
+            <h2>Rules:</h2>
+            <p>1. The game is played on a 3x3 grid.</p>
+            <p>2. Players take turns to place their marker (X or O) in an empty cell.</p>
+            <p>3. The first player to get three of their markers in a row (horizontally, vertically, or diagonally) wins.</p>
+            <p>4. If all cells are filled and no player has three in a row, the game is a tie.</p>
+        </div>
+        <div id="player-inputs">
+            <input type="text" id="player1" placeholder="Player 1 Name" required>
+            <input type="text" id="player2" placeholder="Player 2 Name" required>
+            <button id="start">Start Game</button>
+        </div>
+        <div id="board" class="hidden">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        <div id="status" class="hidden"></div>
+        <button id="reset" class="hidden">Reset Game</button>
+        <button id="exit" class="hidden">Exit Game</button>
+        <div id="scoreboard" class="hidden">
+            <div id="player1Score">Player 1: 0</div>
+            <div id="player2Score">Player 2: 0</div>
+        </div>
+        <audio id="placeMarkerSound" src="place_marker_sound.mp3"></audio>
+        <audio id="winSound" src="win_sound.mp3"></audio>
+        <audio id="tieSound" src="tie_sound.mp3"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

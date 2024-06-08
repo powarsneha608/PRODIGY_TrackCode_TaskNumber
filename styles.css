@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222222; /* Dark Gray */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game {
+    text-align: center;
+}
+
+h1 {
+    color: #61dafb; /* Light Blue */
+    margin-bottom: 20px;
+}
+
+#rules {
+    color: #ffffff; /* White */
+    margin-bottom: 20px;
+}
+
+#player-inputs {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 2px solid #61dafb; /* Light Blue */
+    outline: none;
+    width: calc(50% - 22px); /* Adjust width for padding and margin */
+    background-color: #333333; /* Dark Gray */
+    color: #ffffff; /* White */
+}
+
+input[type="text"]::placeholder {
+    color: #999999; /* Light Gray */
+}
+
+input[type="text"]:focus {
+    border-color: #0d6efd; /* Dark Blue */
+}
+
+#player-inputs button {
+    background-color: #0d6efd; /* Dark Blue */
+    color: #ffffff; /* White */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#player-inputs button:hover {
+    background-color: #0056b3; /* Darker Blue */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    background-color: #333333; /* Dark Gray */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff; /* White */
+    border: 2px solid #61dafb; /* Light Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 10px;
+}
+
+.cell:hover {
+    background-color: #0d6efd; /* Dark Blue */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+#status {
+    color: #ffffff; /* White */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#reset, #exit {
+    background-color: #0d6efd; /* Dark Blue */
+    color: #ffffff; /* White */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#reset:hover, #exit:hover {
+    background-color: #0056b3; /* Darker Blue */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+#scoreboard {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
+    color: #ffffff; /* White */
+}
+
+#player1Score, #player2Score {
+    font-weight: bold;
+}
+
+.win-animation {
+    animation: win 0.5s infinite alternate;
+}
+
+@keyframes win {
+    0% {
+        background-color: #0d6efd; /* Dark Blue */
+    }
+    100% {
+        background-color: #0056b3; /* Darker Blue */
+    }
+}
